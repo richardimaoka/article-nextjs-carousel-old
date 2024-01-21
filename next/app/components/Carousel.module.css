@@ -1,4 +1,6 @@
 .component {
   width: 648px;
   margin: auto;
+
+  display: flex;
 }
