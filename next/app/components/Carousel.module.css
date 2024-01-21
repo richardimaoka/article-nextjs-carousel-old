@@ -3,4 +3,6 @@
   margin: auto;
 
   display: flex;
+
+  overflow-x: auto;
 }
