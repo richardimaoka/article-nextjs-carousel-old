@@ -1,0 +1,20 @@
+import Image from "next/image";
+
+interface Props {
+  width: number;
+  height: number;
+  src: string;
+}
+
+export function CarouselItem(props: Props) {
+  return (
+    <div>
+      <Image
+        width={props.width}
+        height={props.height}
+        src={props.src}
+        alt={props.src}
+      />
+    </div>
+  );
+}
