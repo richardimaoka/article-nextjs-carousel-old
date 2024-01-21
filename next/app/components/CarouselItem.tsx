@@ -1,3 +1,4 @@
+import styles from "./CarouselItem.module.css";
 import Image from "next/image";
 
 interface Props {
@@ -8,7 +9,7 @@ interface Props {
 
 export function CarouselItem(props: Props) {
   return (
-    <div>
+    <div className={styles.component}>
       <Image
         width={props.width}
         height={props.height}
