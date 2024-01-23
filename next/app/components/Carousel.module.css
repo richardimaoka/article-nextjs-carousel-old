@@ -9,3 +9,17 @@
   overflow-x: hidden;
   scroll-snap-type: x mandatory;
 }
+
+.buttons {
+  display: flex;
+  column-gap: 20px;
+  justify-content: center;
+}
+
+.button {
+  font-size: 16px;
+  border-style: none;
+  background-color: lightgrey;
+  color: white;
+  padding: 4px 12px;
+}
