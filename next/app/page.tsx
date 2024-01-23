@@ -1,3 +1,5 @@
+import styles from "./page.module.css";
+
 import { Carousel } from "./components/Carousel";
 
 export default function Page() {
@@ -20,7 +22,7 @@ export default function Page() {
   ];
 
   return (
-    <main>
+    <main className={styles.component}>
       <Carousel items={items} />
     </main>
   );
