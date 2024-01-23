@@ -24,9 +24,11 @@ export function Carousel(props: Props) {
         ))}
       </div>
       <div>
-        <button onClick={() => setItemIndex(0)}>1</button>
-        <button onClick={() => setItemIndex(1)}>2</button>
-        <button onClick={() => setItemIndex(2)}>3</button>
+        {props.items.map((x, index) => (
+          <button key={x.src} onClick={() => setItemIndex(index)}>
+            {index + 1}
+          </button>
+        ))}
       </div>
     </div>
   );
