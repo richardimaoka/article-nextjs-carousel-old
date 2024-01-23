@@ -1,12 +1,16 @@
 import styles from "./Carousel.module.css";
-import { CarouselItem } from "./CarouselItem";
+import { CarouselItem, CarouselItemProps } from "./CarouselItem";
 
-export function Carousel() {
+interface Props {
+  items: CarouselItemProps[];
+}
+
+export function Carousel(props: Props) {
   return (
     <div className={styles.component}>
-      <CarouselItem width={640} height={360} src={"/images/1.png"} />
-      <CarouselItem width={640} height={360} src={"/images/2.png"} />
-      <CarouselItem width={640} height={360} src={"/images/3.png"} />
+      {props.items.map((x) => (
+        <CarouselItem key={x.src} width={x.width} height={x.height} src={x.src} />
+      ))}
     </div>
   );
 }

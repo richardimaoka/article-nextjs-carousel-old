@@ -7,6 +7,8 @@ interface Props {
   src: string;
 }
 
+export type CarouselItemProps = Props;
+
 export function CarouselItem(props: Props) {
   return (
     <div className={styles.component}>
