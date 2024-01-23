@@ -27,7 +27,11 @@ export function Carousel(props: Props) {
         {props.items.map((x, index) => (
           <button
             key={x.src}
-            className={styles.button}
+            className={
+              index == selectItemIndex
+                ? `${styles.button} ${styles.selected}`
+                : styles.button
+            }
             onClick={() => setItemIndex(index)}
           >
             {index + 1}

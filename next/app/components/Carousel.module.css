@@ -23,3 +23,7 @@
   color: white;
   padding: 4px 12px;
 }
+
+.button.selected {
+  background-color: blueviolet;
+}
