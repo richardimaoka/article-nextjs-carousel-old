@@ -1,3 +1,5 @@
+"use client";
+import { useState } from "react";
 import styles from "./Carousel.module.css";
 import { CarouselItem, CarouselItemProps } from "./CarouselItem";
 
@@ -6,22 +8,25 @@ interface Props {
 }
 
 export function Carousel(props: Props) {
+  const [selectItemIndex, setItemIndex] = useState(0);
+
   return (
     <div className={styles.component}>
       <div className={styles.slider}>
-        {props.items.map((x) => (
+        {props.items.map((x, index) => (
           <CarouselItem
             key={x.src}
             width={x.width}
             height={x.height}
             src={x.src}
+            isSelected={index == selectItemIndex}
           />
         ))}
       </div>
       <div>
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
+        <button onClick={() => setItemIndex(0)}>1</button>
+        <button onClick={() => setItemIndex(1)}>2</button>
+        <button onClick={() => setItemIndex(2)}>3</button>
       </div>
     </div>
   );

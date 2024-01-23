@@ -5,6 +5,7 @@ interface Props {
   width: number;
   height: number;
   src: string;
+  isSelected?: boolean;
 }
 
 export type CarouselItemProps = Props;
